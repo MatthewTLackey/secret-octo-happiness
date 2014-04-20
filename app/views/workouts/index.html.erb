@@ -1,0 +1,9 @@
+<h1>Workouts</h1>
+<% @workouts.each do |w| %>
+  <div class="workout">
+    <header><%= w.name %></header>
+    <time><%= w.duration %></time>
+    <p>Body part or a brief description</p>
+  </div>
+
+<% end %>
