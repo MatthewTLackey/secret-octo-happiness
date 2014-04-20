@@ -4,7 +4,10 @@ Lift::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
 
-  resources :users
+  resources :users do 
+    resources :workouts
+    resources :exercises
+  end
   
   root  'static_pages#home'
   match '/signup',  to: 'users#new',            via: 'get'
